@@ -4,19 +4,27 @@ body{
     background-color: black;
 }
 video{
+    margin-left: auto;
+    margin-right: auto;
     max-width: 100%;
 }
 </style>
 
 <html>
     <body>
-        <video autoplay type="video/mp4" src="just the bark.mp4" loop muted></video>
+        <video id="barkboy" autoplay type="video/mp4" src="just the bark.mp4" loop muted></video>
     </body>
 </html>
-<script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-    $(document).ready({
-        $("video").prop('muted', false);
+<script>
+$(document).ready(function(){
+    var video=document.getElementById("barkboy");
+
+if(video.muted){
+  video.muted = false;
+} else {
+  video.muted = true;
+}
     });
 </script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

@@ -188,7 +188,10 @@ function getCoonWords(maxWords) {
             if(finalParagraph == null){
                 var finalParagraph = Words[whichWord].charAt(0).toUpperCase() + Words[whichWord].substring(1);
             }
-            var finalParagraph = finalParagraph + " " + Words[whichWord].toLowerCase();
+            else{
+                var finalParagraph = finalParagraph + " " + Words[whichWord].toLowerCase();
+
+            }
 
         }
     }

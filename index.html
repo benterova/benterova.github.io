@@ -1,31 +1,59 @@
-<!DOCTYPE html>
-<title>THE BOYS ARE BARK IN TOWN🐶</title>
-<style>
-body{
-    background-color: black;
-}
-video{
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 100%;
-}
-</style>
-
+<!DOCTYPE HTML>
+<!--
+	Directive by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
 <html>
-    <body>
-        <video id="barkboy" autoplay type="video/mp4" src="just the bark.mp4" loop muted playsinline"></video>
-    </body>
+
+<head>
+	<title>Coon Rocks! An Ipsum Generator</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+</head>
+
+<body class="is-preload">
+
+	<!-- Header -->
+	<div id="header">
+		<img width="150" src="images/coonrocks.png">
+		<h1>The Library of Coon</h1>
+		<p>An open source project designed to unravel the rat himself. | Beta v.45</p>
+		<div class="slidecontainer">
+			<p style="font-size: 12px;">How many words, homie?</p>
+			<input type="number" value="50" class="wordCounter" id="maxWordInput">
+		  </div>
+	</div>
+	<div class="box container">
+		<header>
+			<h2>The Word of Coon</h2>
+		</header>
+		<section>
+			<p id="coonContent"></p>
+		</section>
+
+
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/coonipsum.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+		<script>
+		// Going to write some code here to call the coon function and
+		// populate the div with all of the content. Paragraph formatting might come later?
+			$(document).ready(function(){
+				$("#coonContent").html(getCoonWords($("#maxWordInput").val()));
+				document.getElementById("coonContent").innerHTML.toLowerCase();
+			});
+			$("#maxWordInput").change(function(){
+				$("#coonContent").html(getCoonWords($("#maxWordInput").val()));
+
+			});
+		</script>
+
+</body>
+
 </html>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-<script>
-$(document).ready(function(){
-    var video=document.getElementById("barkboy");
-
-if(video.muted){
-  video.muted = false;
-} else {
-  video.muted = true;
-}
-    });
-</script>
